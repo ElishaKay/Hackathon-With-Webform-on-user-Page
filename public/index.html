@@ -34,11 +34,19 @@
     <script type="text/javascript">
               $(document).ready(function () {
                 $(".github").hide();    // just add this
-                $("#btnShowForm").click(function () {
+                $(".btnShowForm").click(function () {
                     $(".github").slideToggle('slow');
                     $(this).fadeOut('slow');
                 });
             });
+
+              $(".btnShowForm").click(function() {
+                  $('html, body').animate({
+                      scrollTop: $(".github").offset().top
+                  }, 2000);
+              });
+
+
     </script>
 <!-- Scripts -->
 
